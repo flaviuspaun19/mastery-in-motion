@@ -4,7 +4,7 @@ import { ArrowLeft, Filter } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Navigation from '@/components/Navigation';
 import SkillCard from '@/components/SkillCard';
-import { categories, allSkills } from '@/data/skillsData';
+import { categories, featuredSkills } from '@/data/skillsData';
 import { useState } from 'react';
 
 const CategoryPage = () => {
@@ -29,8 +29,8 @@ const CategoryPage = () => {
     );
   }
 
-  // Filter skills by category using the expanded skills data
-  const categorySkills = allSkills.filter(skill => 
+  // Filter skills by category (in a real app, this would come from an API)
+  const categorySkills = featuredSkills.filter(skill => 
     skill.category.toLowerCase() === category.name.toLowerCase()
   );
 
@@ -45,9 +45,9 @@ const CategoryPage = () => {
       {/* Category Header */}
       <section className="py-12 px-4">
         <div className="max-w-7xl mx-auto">
-          <Link to="/browse" className="inline-flex items-center text-blue-600 hover:text-blue-700 mb-6 font-medium">
+          <Link to="/" className="inline-flex items-center text-blue-600 hover:text-blue-700 mb-6 font-medium">
             <ArrowLeft className="mr-2 h-4 w-4" />
-            Back to Browse
+            Back to Home
           </Link>
           
           <div className="flex items-center mb-8">
@@ -60,7 +60,7 @@ const CategoryPage = () => {
                 {category.description}
               </p>
               <p className="text-gray-500">
-                {categorySkills.length} skills available
+                {category.skillCount} skills available
               </p>
             </div>
           </div>
@@ -69,7 +69,7 @@ const CategoryPage = () => {
             <div className="flex items-center space-x-4">
               <Button variant="outline" className="flex items-center">
                 <Filter className="mr-2 h-4 w-4" />
-                Filter by Difficulty
+                Filter
               </Button>
             </div>
           </div>
@@ -97,7 +97,7 @@ const CategoryPage = () => {
             <p className="text-gray-600 mb-6">
               We're working on adding more {category.name.toLowerCase()} skills. Check back soon!
             </p>
-            <Link to="/browse">
+            <Link to="/">
               <Button>Explore Other Categories</Button>
             </Link>
           </div>

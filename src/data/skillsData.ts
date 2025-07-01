@@ -1,436 +1,128 @@
 
-export interface Skill {
-  id: number;
-  title: string;
-  description: string;
-  category: string;
-  thumbnail: string;
-  duration: string;
-  difficulty: 'Beginner' | 'Intermediate' | 'Advanced';
-  views: string;
-  videoUrl?: string;
-}
-
-export interface Category {
-  name: string;
-  slug: string;
-  icon: string;
-  description: string;
-  skillCount: number;
-}
-
-export const categories: Category[] = [
-  {
-    name: 'React',
-    slug: 'react',
-    icon: '⚛️',
-    description: 'Master React hooks, components, and patterns in 60 seconds',
-    skillCount: 12
-  },
-  {
-    name: 'UX/UI',
-    slug: 'ux-ui',
-    icon: '🎨',
-    description: 'Quick design principles and user experience tips',
-    skillCount: 10
-  },
-  {
-    name: 'API Design',
-    slug: 'api-design',
-    icon: '🔌',
-    description: 'REST, GraphQL, and API best practices',
-    skillCount: 8
-  },
-  {
-    name: '.NET',
-    slug: 'dotnet',
-    icon: '🔷',
-    description: 'C#, ASP.NET, and .NET Core quick wins',
-    skillCount: 9
-  },
-  {
-    name: 'SQL',
-    slug: 'sql',
-    icon: '🗄️',
-    description: 'Database queries, optimization, and design patterns',
-    skillCount: 11
-  },
-  {
-    name: 'Security',
-    slug: 'security',
-    icon: '🔒',
-    description: 'Cybersecurity fundamentals and best practices',
-    skillCount: 9
-  },
-  {
-    name: 'Quality',
-    slug: 'quality',
-    icon: '✅',
-    description: 'Testing, QA processes, and quality assurance',
-    skillCount: 8
-  },
-  {
-    name: 'JavaScript',
-    slug: 'javascript',
-    icon: '🟨',
-    description: 'Modern JavaScript tricks and ES6+ features',
-    skillCount: 15
-  }
-];
-
-export const featuredSkills: Skill[] = [
-  // React Skills
+export const featuredSkills = [
   {
     id: 1,
-    title: 'useEffect Cleanup Pattern',
-    description: 'Prevent memory leaks with proper useEffect cleanup functions',
-    category: 'React',
-    thumbnail: 'https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400&h=300&fit=crop',
-    duration: '45s',
-    difficulty: 'Intermediate',
-    views: '2.1K'
+    title: "Perfect Shirt Fold in 3 Steps",
+    description: "Master the retail-style shirt folding technique that keeps your wardrobe organized and professional.",
+    category: "Life Hacks",
+    thumbnail: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=400&h=300&fit=crop",
+    duration: "45 sec",
+    difficulty: "Beginner" as const,
+    views: "2.3M",
+    videoUrl: "https://example.com/video1"
   },
   {
     id: 2,
-    title: 'Custom Hook for API Calls',
-    description: 'Create reusable custom hooks for data fetching',
-    category: 'React',
-    thumbnail: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=400&h=300&fit=crop',
-    duration: '60s',
-    difficulty: 'Advanced',
-    views: '3.2K'
+    title: "JavaScript Array.map() Magic",
+    description: "Transform arrays like a pro with this essential JavaScript method that every developer should know.",
+    category: "Coding",
+    thumbnail: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop",
+    duration: "60 sec",
+    difficulty: "Intermediate" as const,
+    views: "1.8M",
+    videoUrl: "https://example.com/video2"
   },
   {
     id: 3,
-    title: 'React.memo Optimization',
-    description: 'Prevent unnecessary re-renders with React.memo',
-    category: 'React',
-    thumbnail: 'https://images.unsplash.com/photo-1587620962725-abab7fe55159?w=400&h=300&fit=crop',
-    duration: '50s',
-    difficulty: 'Intermediate',
-    views: '1.8K'
+    title: "The Ultimate Bowline Knot",
+    description: "Learn the king of knots - strong, secure, and easy to untie. Essential for sailing, climbing, and camping.",
+    category: "Outdoors",
+    thumbnail: "https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?w=400&h=300&fit=crop",
+    duration: "55 sec",
+    difficulty: "Beginner" as const,
+    views: "987K",
+    videoUrl: "https://example.com/video3"
   },
-
-  // UX/UI Skills
   {
     id: 4,
-    title: 'The 60-30-10 Color Rule',
-    description: 'Master color harmony with the classic design principle',
-    category: 'UX/UI',
-    thumbnail: 'https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=400&h=300&fit=crop',
-    duration: '55s',
-    difficulty: 'Beginner',
-    views: '4.5K'
+    title: "5-Minute Scrambled Eggs Hack",
+    description: "Restaurant-quality scrambled eggs using this simple technique that transforms your breakfast game.",
+    category: "Cooking",
+    thumbnail: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=400&h=300&fit=crop",
+    duration: "50 sec",
+    difficulty: "Beginner" as const,
+    views: "3.1M",
+    videoUrl: "https://example.com/video4"
   },
   {
     id: 5,
-    title: 'Micro-interactions with CSS',
-    description: 'Add delightful hover effects and transitions',
-    category: 'UX/UI',
-    thumbnail: 'https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=400&h=300&fit=crop',
-    duration: '58s',
-    difficulty: 'Intermediate',
-    views: '2.7K'
+    title: "CSS Flexbox Center Trick",
+    description: "Stop struggling with centering elements! This flexbox technique works every time, guaranteed.",
+    category: "Coding",
+    thumbnail: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=400&h=300&fit=crop",
+    duration: "40 sec",
+    difficulty: "Intermediate" as const,
+    views: "1.5M",
+    videoUrl: "https://example.com/video5"
   },
   {
     id: 6,
-    title: 'Accessibility: Focus States',
-    description: 'Design keyboard-friendly focus indicators',
-    category: 'UX/UI',
-    thumbnail: 'https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=400&h=300&fit=crop',
-    duration: '52s',
-    difficulty: 'Beginner',
-    views: '1.9K'
-  },
-
-  // API Design Skills
-  {
-    id: 7,
-    title: 'RESTful URL Naming',
-    description: 'Design intuitive and consistent API endpoints',
-    category: 'API Design',
-    thumbnail: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=300&fit=crop',
-    duration: '48s',
-    difficulty: 'Beginner',
-    views: '3.1K'
-  },
-  {
-    id: 8,
-    title: 'API Rate Limiting',
-    description: 'Implement basic rate limiting to protect your API',
-    category: 'API Design',
-    thumbnail: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop',
-    duration: '60s',
-    difficulty: 'Intermediate',
-    views: '2.3K'
-  },
-
-  // .NET Skills
-  {
-    id: 9,
-    title: 'LINQ One-Liner Magic',
-    description: 'Transform data with powerful LINQ expressions',
-    category: '.NET',
-    thumbnail: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=300&fit=crop',
-    duration: '45s',
-    difficulty: 'Intermediate',
-    views: '2.8K'
-  },
-  {
-    id: 10,
-    title: 'Dependency Injection Setup',
-    description: 'Configure DI container in ASP.NET Core',
-    category: '.NET',
-    thumbnail: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=400&h=300&fit=crop',
-    duration: '55s',
-    difficulty: 'Advanced',
-    views: '1.7K'
-  },
-
-  // SQL Skills
-  {
-    id: 11,
-    title: 'Window Functions Basics',
-    description: 'ROW_NUMBER, RANK, and DENSE_RANK in one minute',
-    category: 'SQL',
-    thumbnail: 'https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=400&h=300&fit=crop',
-    duration: '60s',
-    difficulty: 'Intermediate',
-    views: '4.2K'
-  },
-  {
-    id: 12,
-    title: 'Index Performance Trick',
-    description: 'Speed up queries with composite index ordering',
-    category: 'SQL',
-    thumbnail: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop',
-    duration: '50s',
-    difficulty: 'Advanced',
-    views: '3.6K'
-  },
-
-  // Security Skills
-  {
-    id: 13,
-    title: 'JWT Token Security',
-    description: 'Implement secure JWT token validation',
-    category: 'Security',
-    thumbnail: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=300&fit=crop',
-    duration: '58s',
-    difficulty: 'Intermediate',
-    views: '5.1K'
-  },
-  {
-    id: 14,
-    title: 'SQL Injection Prevention',
-    description: 'Parameterized queries to stop SQL injection',
-    category: 'Security',
-    thumbnail: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=400&h=300&fit=crop',
-    duration: '52s',
-    difficulty: 'Beginner',
-    views: '6.3K'
-  },
-
-  // Quality Skills
-  {
-    id: 15,
-    title: 'Unit Test Structure: AAA',
-    description: 'Arrange, Act, Assert pattern for clean tests',
-    category: 'Quality',
-    thumbnail: 'https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400&h=300&fit=crop',
-    duration: '48s',
-    difficulty: 'Beginner',
-    views: '3.4K'
-  },
-  {
-    id: 16,
-    title: 'Mocking with Jest',
-    description: 'Mock external dependencies in JavaScript tests',
-    category: 'Quality',
-    thumbnail: 'https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=400&h=300&fit=crop',
-    duration: '55s',
-    difficulty: 'Intermediate',
-    views: '2.9K'
-  },
-
-  // JavaScript Skills
-  {
-    id: 17,
-    title: 'Destructuring Assignment',
-    description: 'Extract values from arrays and objects elegantly',
-    category: 'JavaScript',
-    thumbnail: 'https://images.unsplash.com/photo-1627398242454-45a1465c2479?w=400&h=300&fit=crop',
-    duration: '42s',
-    difficulty: 'Beginner',
-    views: '7.8K'
-  },
-  {
-    id: 18,
-    title: 'Promise.all vs Promise.allSettled',
-    description: 'Handle multiple async operations like a pro',
-    category: 'JavaScript',
-    thumbnail: 'https://images.unsplash.com/photo-1579468118864-1b9ea3c0db4a?w=400&h=300&fit=crop',
-    duration: '60s',
-    difficulty: 'Intermediate',
-    views: '4.7K'
+    title: "Speed Reading Finger Technique",
+    description: "Double your reading speed with this simple finger-pacing method used by speed reading champions.",
+    category: "Productivity",
+    thumbnail: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=300&fit=crop",
+    duration: "58 sec",
+    difficulty: "Beginner" as const,
+    views: "2.7M",
+    videoUrl: "https://example.com/video6"
   }
 ];
 
-// Additional skills for each category (not featured but available in category pages)
-export const allSkills: Skill[] = [
-  ...featuredSkills,
-  
-  // More React Skills
+export const categories = [
   {
-    id: 19,
-    title: 'Context API Pattern',
-    description: 'Share state across components without prop drilling',
-    category: 'React',
-    thumbnail: 'https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400&h=300&fit=crop',
-    duration: '58s',
-    difficulty: 'Intermediate',
-    views: '1.5K'
+    name: "Coding",
+    slug: "coding",
+    icon: "💻",
+    skillCount: 127,
+    description: "Quick programming tricks and techniques"
   },
   {
-    id: 20,
-    title: 'Error Boundaries',
-    description: 'Catch and handle React component errors gracefully',
-    category: 'React',
-    thumbnail: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=400&h=300&fit=crop',
-    duration: '52s',
-    difficulty: 'Advanced',
-    views: '1.2K'
-  },
-
-  // More UX/UI Skills
-  {
-    id: 21,
-    title: 'Typography Hierarchy',
-    description: 'Create visual hierarchy with font sizes and weights',
-    category: 'UX/UI',
-    thumbnail: 'https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=400&h=300&fit=crop',
-    duration: '50s',
-    difficulty: 'Beginner',
-    views: '2.1K'
+    name: "Cooking",
+    slug: "cooking", 
+    icon: "🍳",
+    skillCount: 89,
+    description: "Fast kitchen tips and recipes"
   },
   {
-    id: 22,
-    title: 'Mobile-First Design',
-    description: 'Design for mobile screens first, then scale up',
-    category: 'UX/UI',
-    thumbnail: 'https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=400&h=300&fit=crop',
-    duration: '55s',
-    difficulty: 'Intermediate',
-    views: '1.8K'
-  },
-
-  // More API Design Skills
-  {
-    id: 23,
-    title: 'HTTP Status Codes',
-    description: 'Use the right status codes for better API communication',
-    category: 'API Design',
-    thumbnail: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=300&fit=crop',
-    duration: '45s',
-    difficulty: 'Beginner',
-    views: '2.7K'
+    name: "Life Hacks",
+    slug: "life-hacks",
+    icon: "💡",
+    skillCount: 156,
+    description: "Clever shortcuts for daily tasks"
   },
   {
-    id: 24,
-    title: 'API Versioning Strategy',
-    description: 'Implement backward-compatible API versioning',
-    category: 'API Design',
-    thumbnail: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop',
-    duration: '60s',
-    difficulty: 'Advanced',
-    views: '1.4K'
-  },
-
-  // More .NET Skills
-  {
-    id: 25,
-    title: 'Async/Await Best Practices',
-    description: 'Avoid deadlocks and improve performance',
-    category: '.NET',
-    thumbnail: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=300&fit=crop',
-    duration: '58s',
-    difficulty: 'Intermediate',
-    views: '2.3K'
+    name: "Productivity",
+    slug: "productivity",
+    icon: "⚡",
+    skillCount: 73,
+    description: "Efficiency tips and time-savers"
   },
   {
-    id: 26,
-    title: 'Entity Framework Optimization',
-    description: 'Prevent N+1 queries with Include and Select',
-    category: '.NET',
-    thumbnail: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=400&h=300&fit=crop',
-    duration: '60s',
-    difficulty: 'Advanced',
-    views: '1.9K'
-  },
-
-  // More SQL Skills
-  {
-    id: 27,
-    title: 'Common Table Expressions',
-    description: 'Simplify complex queries with CTEs',
-    category: 'SQL',
-    thumbnail: 'https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=400&h=300&fit=crop',
-    duration: '55s',
-    difficulty: 'Intermediate',
-    views: '3.1K'
+    name: "Outdoors",
+    slug: "outdoors",
+    icon: "🏔️",
+    skillCount: 45,
+    description: "Survival skills and outdoor tips"
   },
   {
-    id: 28,
-    title: 'Query Execution Plans',
-    description: 'Read and optimize SQL execution plans',
-    category: 'SQL',
-    thumbnail: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop',
-    duration: '60s',
-    difficulty: 'Advanced',
-    views: '2.5K'
-  },
-
-  // More Security Skills
-  {
-    id: 29,
-    title: 'CORS Configuration',
-    description: 'Secure cross-origin requests properly',
-    category: 'Security',
-    thumbnail: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=300&fit=crop',
-    duration: '50s',
-    difficulty: 'Intermediate',
-    views: '2.8K'
+    name: "Health",
+    slug: "health",
+    icon: "🏃",
+    skillCount: 67,
+    description: "Quick fitness and wellness tips"
   },
   {
-    id: 30,
-    title: 'Password Hashing',
-    description: 'Implement secure password storage with bcrypt',
-    category: 'Security',
-    thumbnail: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=400&h=300&fit=crop',
-    duration: '52s',
-    difficulty: 'Beginner',
-    views: '4.1K'
-  },
-
-  // More Quality Skills
-  {
-    id: 31,
-    title: 'Integration Testing',
-    description: 'Test component interactions and API endpoints',
-    category: 'Quality',
-    thumbnail: 'https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400&h=300&fit=crop',
-    duration: '60s',
-    difficulty: 'Intermediate',
-    views: '1.7K'
+    name: "DIY",
+    slug: "diy",
+    icon: "🔧",
+    skillCount: 92,
+    description: "Simple fixes and crafts"
   },
   {
-    id: 32,
-    title: 'Code Coverage Metrics',
-    description: 'Measure and improve test coverage effectively',
-    category: 'Quality',
-    thumbnail: 'https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=400&h=300&fit=crop',
-    duration: '48s',
-    difficulty: 'Beginner',
-    views: '2.2K'
+    name: "Tech",
+    slug: "tech",
+    icon: "📱",
+    skillCount: 81,
+    description: "Device tips and digital shortcuts"
   }
 ];
